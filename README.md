@@ -21,6 +21,8 @@ Current JWT Protected Endpoints (requires a login to get a token)
 
 `FILES`
 
+`SECRET`
+
 This is till project is not yet complete
 
 # ⚙️ Configuration
