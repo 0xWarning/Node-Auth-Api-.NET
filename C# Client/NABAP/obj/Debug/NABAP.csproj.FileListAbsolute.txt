@@ -1,0 +1,13 @@
+C:\Users\0xwar\source\repos\NABAP\NABAP\bin\Debug\NABAP.exe.config
+C:\Users\0xwar\source\repos\NABAP\NABAP\bin\Debug\NABAP.exe
+C:\Users\0xwar\source\repos\NABAP\NABAP\bin\Debug\NABAP.pdb
+C:\Users\0xwar\source\repos\NABAP\NABAP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.csproj.AssemblyReference.cache
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.csproj.SuggestedBindingRedirects.cache
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.Form1.resources
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.Properties.Resources.resources
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.csproj.GenerateResource.cache
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.csproj.CoreCompileInputs.cache
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.csproj.CopyComplete
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.exe
+C:\Users\0xwar\source\repos\NABAP\NABAP\obj\Debug\NABAP.pdb
