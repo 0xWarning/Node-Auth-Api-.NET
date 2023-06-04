@@ -16,6 +16,8 @@ namespace NABAP
         {
             public static string name { get; set; }
             public static string email { get; set; }
+
+            public static string license { get; set; }
             public static string token { get; set; }
         }
 
@@ -43,6 +45,53 @@ namespace NABAP
         //    public static string rwip { get; set; }
         //    public static string referral { get; set; }
         //}
+
+
+        public bool LoginToken(string license)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:1337/api/user/login-license");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+            try
+            {
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = new JavaScriptSerializer().Serialize(new
+                    {
+                        license = license,
+                    });
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong report to developer");
+                return false;
+            }
+
+            try
+            {
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    AuthToken.token = result;
+                    UserLoggedInfo.license = license;
+                    UserLoggedInfo.token = result;
+                    MessageBox.Show(result);
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
 
         public bool Login(string email, string password)
         {

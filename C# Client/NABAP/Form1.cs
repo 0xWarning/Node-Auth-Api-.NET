@@ -46,5 +46,16 @@ namespace NABAP
         {
             AAPI.RemoveUser(textBox5.Text);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (AAPI.LoginToken(textBox4.Text))
+            {
+                label2.Text = "Logged In <3";
+                label1.Text = "Grabbed login info :)";
+                textBox1.Text = "Token > " + UserLoggedInfo.token;
+                textBox2.Text = "License > " + UserLoggedInfo.license;
+            }
+        }
     }
 }

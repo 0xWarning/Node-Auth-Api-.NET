@@ -144,7 +144,7 @@ router.post("/login", async (req, res) => {
 });
 
 
-router.post("/login-token", async (req, res) => {
+router.post("/login-license", async (req, res) => {
   try {
 
     const licExist = await UserLicense.findOne({ license: req.body.license });

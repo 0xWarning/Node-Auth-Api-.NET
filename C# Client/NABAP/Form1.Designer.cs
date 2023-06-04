@@ -46,22 +46,26 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // logEmailEdit
@@ -104,12 +108,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox8);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(310, 178);
+            this.groupBox2.Size = new System.Drawing.Size(461, 178);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "User Interaction";
@@ -119,7 +124,7 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Location = new System.Drawing.Point(6, 125);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(145, 46);
+            this.groupBox4.Size = new System.Drawing.Size(296, 46);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Login Status";
@@ -140,7 +145,7 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.regNameEdit);
             this.groupBox3.Controls.Add(this.regEmailEdit);
-            this.groupBox3.Location = new System.Drawing.Point(157, 19);
+            this.groupBox3.Location = new System.Drawing.Point(308, 19);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(145, 152);
             this.groupBox3.TabIndex = 3;
@@ -196,7 +201,7 @@
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Location = new System.Drawing.Point(12, 196);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(310, 90);
+            this.groupBox5.Size = new System.Drawing.Size(453, 90);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "User Info (After Login)";
@@ -206,7 +211,7 @@
             this.textBox2.Location = new System.Drawing.Point(6, 61);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(296, 20);
+            this.textBox2.Size = new System.Drawing.Size(440, 20);
             this.textBox2.TabIndex = 7;
             this.textBox2.Text = "Email";
             // 
@@ -215,7 +220,7 @@
             this.textBox1.Location = new System.Drawing.Point(6, 35);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(298, 20);
+            this.textBox1.Size = new System.Drawing.Size(440, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Token";
             // 
@@ -232,59 +237,12 @@
             // 
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Controls.Add(this.groupBox9);
-            this.groupBox6.Location = new System.Drawing.Point(328, 12);
+            this.groupBox6.Location = new System.Drawing.Point(479, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(278, 274);
+            this.groupBox6.Size = new System.Drawing.Size(162, 274);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Admin Panel";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.textBox3);
-            this.groupBox9.Controls.Add(this.button4);
-            this.groupBox9.Controls.Add(this.textBox7);
-            this.groupBox9.Controls.Add(this.textBox8);
-            this.groupBox9.Location = new System.Drawing.Point(6, 19);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(145, 128);
-            this.groupBox9.TabIndex = 1;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Token Gen";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(7, 97);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Create License";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(6, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 20);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.Text = "Custom License Key";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(6, 45);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 20);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.Text = "Rank";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(7, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Expiry";
             // 
             // groupBox7
             // 
@@ -315,11 +273,87 @@
             this.textBox5.TabIndex = 0;
             this.textBox5.Text = "Email Here";
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.textBox3);
+            this.groupBox9.Controls.Add(this.button4);
+            this.groupBox9.Controls.Add(this.textBox7);
+            this.groupBox9.Controls.Add(this.textBox8);
+            this.groupBox9.Location = new System.Drawing.Point(6, 19);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(145, 128);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Token Gen";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(7, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(132, 20);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "Expiry";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(7, 97);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(132, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Create License";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(6, 19);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(132, 20);
+            this.textBox7.TabIndex = 0;
+            this.textBox7.Text = "Custom License Key";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(6, 45);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(132, 20);
+            this.textBox8.TabIndex = 1;
+            this.textBox8.Text = "Rank";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button5);
+            this.groupBox8.Controls.Add(this.textBox4);
+            this.groupBox8.Location = new System.Drawing.Point(157, 19);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(145, 72);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Login (With License)";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 42);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(132, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Login";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(6, 19);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(132, 20);
+            this.textBox4.TabIndex = 0;
+            this.textBox4.Text = "License";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 315);
+            this.ClientSize = new System.Drawing.Size(645, 315);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
@@ -335,10 +369,12 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,6 +407,9 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
