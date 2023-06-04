@@ -3,6 +3,16 @@
 - Scroll down for more information and the api section
 - This is very simple and was made as an example for a friend who has barely any coding knowledge it was just slapped together
 
+# 🍺 Some features (more to come)
+
+- Login - Email + Pass,
+- Login (License Only),
+- Register - Username + Email + Pass + License Key,
+- Remove User By Email,
+- Generate License's With Custom Prefix, Rank and Expiry.
+
+(Just make a function to detect when its expired and detect what each rank should do)
+
 ## --------- Admin Panel + Node -------------
 
 <p align="center">
