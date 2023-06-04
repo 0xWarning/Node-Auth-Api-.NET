@@ -143,6 +143,39 @@ router.post("/login", async (req, res) => {
   console.log(`${user.name}`.cyan + ` has logged in `.gray);
 });
 
+
+router.post("/login-token", async (req, res) => {
+  try {
+
+    const licExist = await UserLicense.findOne({ license: req.body.license });
+    if (!licExist) {
+      return res.status(400).send("License does not exist");
+    } else {
+      const f = await UserLicense.findOne({ license: req.body.license, redeemedBy: "unclamied"})
+      const f2 = await UserLicense.findOne({ license: req.body.license})
+      if (f)
+      {
+        return res.status(400).send("License has not been claimed");
+      }
+      else if (f2)
+      {
+        const token = jwt.sign(
+          { license: req.body.license },
+          process.env.TOKEN_SECRET
+        );
+        res.header("auth-token", token).send(`logged in | ${token}`);
+      }
+      else
+      {
+        return res.status(400).send("License does not exist");
+      }
+      
+    }
+  } catch (err) {
+    res.send({ message: err });
+  }
+});
+
 // Post Remove User
 
 module.exports = router;
