@@ -3,6 +3,7 @@
 - Scroll down for more information and the api section
 - This is very simple and was made as an example for a friend who has barely any coding knowledge it was just slapped together
 
+# 🍺 Some features (more to come)
 
 - Login - Email + Pass,
 - Login (License Only),
