@@ -11,6 +11,7 @@
 - Remove User By Email,
 - Generate License's With Custom Prefix, Rank and Expiry.
 
+
 (Just make a function to detect when its expired and detect what each rank should do)
 
 ## --------- Admin Panel + Node -------------
@@ -102,6 +103,11 @@ $ node app.js
 
 
 ## ADMIN API
+
+
+- 🖥️ Get All Users
+
+`http://SERVER:1337/api/admin/get_users (POST)`
 
 - 🖥️ Gen Token
 
