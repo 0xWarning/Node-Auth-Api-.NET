@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const verify = require('../util/verifyToken');
-const file = require('../modal/file');
-const devn = require('../modal/devNotes');
-const devNotes = require('../modal/devNotes');
-const Chat = require('../modal/chat');
+const file = require('../model/file');
+const devn = require('../model/devNotes');
+const devNotes = require('../model/devNotes');
+const Chat = require('../model/chat');
 var MongoClient = require('mongodb').MongoClient;
 
 router.get('/', verify, (req, res) => {

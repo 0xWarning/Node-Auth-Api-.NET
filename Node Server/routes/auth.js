@@ -2,8 +2,8 @@ const router = require("express").Router();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const User = require("../modal/user");
-const UserLicense = require("../modal/license");
+const User = require("../model/user");
+const UserLicense = require("../model/license");
 const { registerValidation, loginValidation } = require("../util/validation");
 const { isEmpty } = require("lodash");
 

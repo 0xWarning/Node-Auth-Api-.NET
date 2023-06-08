@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const User = require('../modal/user');
+const User = require('../model/user');
 const verify = require('../util/verifyToken');
-const file = require('../modal/file');
-const UserLicense = require("../modal/license");
+const file = require('../model/file');
+const UserLicense = require("../model/license");
 const fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
 // If no auth-token this won't work
