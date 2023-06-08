@@ -32,7 +32,7 @@ router.post("/gen_token", verify, async (req, res) => {
 
       
       res.status(200).send("License Created");
-
+      console.log(`[ADMIN] `.blue +  `License Created `.yellow);
     }
     else {
       res.status(200).send("AK47 Error");
@@ -62,7 +62,7 @@ router.post("/remove_user", verify, async (req, res) => {
       if (err)
         return console.error(err);
 
-      console.log(`User tied with email `.gray + `${req.body.email}`.cyan + ` was successfully removed`);
+      console.log(`[ADMIN] `.blue + `User tied with email `.gray + `${req.body.email}`.cyan + ` was successfully removed`);
       res.status(200).send("User Deleted");
     })
   }
@@ -97,7 +97,7 @@ router.post("/remove_file", verify, async (req, res) => {
         console.log('path/file.txt was deleted');//or else the file will be deleted
       });
 
-      console.log("Successfully".green + " removed ".red + `${req.body.gname}`.cyan);
+      console.log(`[ADMIN] `.blue + "Successfully".green + " removed ".red + `${req.body.gname}`.cyan);
       res.status(200).send("File Deleted");
     })
 
@@ -125,7 +125,7 @@ router.post("/get_users", verify, async (req, res) => {
             db.close(); // close db
         });
     });
-    console.log(`User list grabbed `.yellow);
+    console.log(`[ADMIN] `.blue +  `User list grabbed `.yellow);
 
     }
     else {

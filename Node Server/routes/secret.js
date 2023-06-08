@@ -44,7 +44,7 @@ router.get('/dev_notes', verify, async (req, res) => {
             db.close(); // close db
         });
     });
-    console.log(`Dev notes have been viewed `.yellow);
+    console.log(`[SECRET]`.black + ` Dev notes have been viewed `.yellow);
 
 });
 
@@ -61,7 +61,7 @@ router.get('/chat_log', verify, async (req, res) => {
             db.close(); // close db
         });
     });
-    console.log(`chat logs have been viewed `.yellow);
+    console.log(`[SECRET]`.black + ` chat logs have been viewed `.yellow);
 
 });
 
