@@ -1,5 +1,4 @@
 // Required Modules
-
 const router = require("express").Router();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
@@ -12,7 +11,6 @@ const { isEmpty } = require("lodash");
 //////////////////
 // (GET) Register
 //////////////////
-
 router.get(
   "/register/:name/:email/:password/:registedwip/:referral",
   async (req, res) => {
@@ -47,7 +45,6 @@ router.get(
 //////////////////
 // (POST) Register
 //////////////////
-
 router.post("/register", async (req, res) => {
   try {
     // const userExist = await User.findOne({user: req.body.user});
@@ -117,7 +114,6 @@ router.post("/register", async (req, res) => {
 //////////////////
 // (GET) Login
 //////////////////
-
 router.get("/login/:email/:password", async (req, res) => {
   const user = await User.findOne({ email: req.params["email"] });
   if (!user) return res.status(400).send("Email or password is wrong");
@@ -137,7 +133,6 @@ router.get("/login/:email/:password", async (req, res) => {
 //////////////////
 // (POST) Login
 //////////////////
-
 router.post("/login", async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   if (!user) return res.status(400).send("Email or password is wrong");
@@ -156,7 +151,6 @@ router.post("/login", async (req, res) => {
 //////////////////
 // (POST) Login License
 //////////////////
-
 router.post("/login-license", async (req, res) => {
   try {
 

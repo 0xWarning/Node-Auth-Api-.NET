@@ -1,5 +1,4 @@
 // Required Modules
-
 const router = require('express').Router();
 const user = require('../model/user');
 const fileReq = require('../model/file');
@@ -17,7 +16,6 @@ router.get('/', verify, (req, res) => {
 //////////////////
 // (POST) Upload File
 //////////////////
-
 router.post('/upload', verify, async (req, res) => {
     try {
         if (!req.files) {
@@ -54,7 +52,6 @@ router.post('/upload', verify, async (req, res) => {
 //////////////////
 // (POST) Upload File DB
 //////////////////
-
 router.post('/upload_db', verify, async (req, res) => {
     try {
         if (!req.files) {
@@ -99,7 +96,6 @@ router.post('/upload_db', verify, async (req, res) => {
 //////////////////
 // (GET) File List
 //////////////////
-
 router.get("/list", verify, (req, res) => {
     MongoClient.connect(process.env.DB_CON_STRING, function (err, db) { // Connect to db
         if (err) throw err;

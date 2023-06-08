@@ -1,5 +1,4 @@
 // Required Modules
-
 const router = require('express').Router();
 const verify = require('../util/verifyToken');
 const file = require('../model/file');
@@ -19,7 +18,6 @@ router.get('/', verify, (req, res) => {
 // (GET) Get Download
 //////////////////
 // Check file exists then retun location as web address to download
-
 router.get('/getDownload', verify, async (req, res) => {
 
     const user = await file.findOne({ name: req.body.name });
@@ -33,7 +31,6 @@ router.get('/getDownload', verify, async (req, res) => {
 //////////////////
 // (GET) Version
 //////////////////
-
 router.get('/version', verify, async (req, res) => {
 
     res.send(`CURRENT VERSION > ${process.env.VERSION}`)
@@ -43,7 +40,6 @@ router.get('/version', verify, async (req, res) => {
 //////////////////
 // (GET) Dev Notes
 //////////////////
-
 router.get('/dev_notes', verify, async (req, res) => {
 
     MongoClient.connect(process.env.DB_CON_STRING, function (err, db) { // Connect to db
@@ -64,7 +60,6 @@ router.get('/dev_notes', verify, async (req, res) => {
 //////////////////
 // (GET) Chat Log
 //////////////////
-
 router.get('/chat_log', verify, async (req, res) => {
 
     MongoClient.connect(process.env.DB_CON_STRING, function (err, db) { // Connect to db
@@ -84,7 +79,6 @@ router.get('/chat_log', verify, async (req, res) => {
 //////////////////
 // (POST) Submit Chat Log
 //////////////////
-
 router.post('/submit_chat_log', verify, async (req, res) => {
 
    // const issue = await Chat.findOne({ issue: req.body.issue });
@@ -106,7 +100,6 @@ router.post('/submit_chat_log', verify, async (req, res) => {
 //////////////////
 // (POST) Submit Dev Notes
 //////////////////
-
 router.post('/submit_dev_note', verify, async (req, res) => {
 
     const issue = await devn.findOne({ issue: req.body.issue });
