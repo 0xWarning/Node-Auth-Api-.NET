@@ -4,6 +4,7 @@ const verify = require('../util/verifyToken');
 const file = require('../modal/file');
 const UserLicense = require("../modal/license");
 const fs = require('fs');
+var MongoClient = require('mongodb').MongoClient;
 // If no auth-token this won't work
 
 router.get('/', verify, (req, res) => {
@@ -102,6 +103,35 @@ router.post("/remove_file", verify, async (req, res) => {
 
 
 
+  }
+  else {
+    res.status(200).send("Authorisation Error");
+    // Incorrect secret key, header
+  }
+})
+
+router.post("/get_users", verify, async (req, res) => {
+  // If req has customer header and value allow the delete
+  if (req.header(process.env.CUSTOM_HEADER) == process.env.CUSTOM_HEADER_VALUE) {
+    if (req.header(process.env.ADMIN_KEY_HEADER) == process.env.ADMIN_KEY) {
+     
+      MongoClient.connect(process.env.DB_CON_STRING, function (err, db) { // Connect to db
+        if (err) throw err;
+        var dbo = db.db("test"); // Selec DB Test
+        // Find table users and required params
+        dbo.collection("users").find({}, { projection: { _id: 0, name: 1, email: 1, license: 1, role: 1 } }).toArray(function (err, result) {
+            if (err) throw err;
+            res.send(result); // Return result
+            db.close(); // close db
+        });
+    });
+    console.log(`User list grabbed `.yellow);
+
+    }
+    else {
+      res.status(200).send("AK47 Error");
+      // Incorrect ADMIN key, header
+    }
   }
   else {
     res.status(200).send("Authorisation Error");

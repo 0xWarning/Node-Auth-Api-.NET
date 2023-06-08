@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 //app.use(morgan('dev'));
 
 app.get("/", (req, res) => {
-  res.send("You have found our api !");
+  res.sendFile(__dirname + '/static/index.html');
 });
 
 // Connect to DB
@@ -41,13 +41,13 @@ mongoose.connect(
   }
 );
 
-// Import Routes
+// Import API Routes
 const adminRoute = require("./routes/admin");
 const authRoute = require("./routes/auth");
 const filesRoute = require("./routes/files");
 const secretRoute = require("./routes/secret");
 
-// Route Middlewares
+// Route API Middlewares
 app.use("/api/admin", adminRoute);
 app.use("/api/user", authRoute);
 app.use("/api/files", filesRoute);
