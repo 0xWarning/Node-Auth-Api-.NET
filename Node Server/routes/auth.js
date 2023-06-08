@@ -1,3 +1,5 @@
+// Required Modules
+
 const router = require("express").Router();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
@@ -7,7 +9,9 @@ const UserLicense = require("../model/license");
 const { registerValidation, loginValidation } = require("../util/validation");
 const { isEmpty } = require("lodash");
 
-// Register Get
+//////////////////
+// (GET) Register
+//////////////////
 
 router.get(
   "/register/:name/:email/:password/:registedwip/:referral",
@@ -40,7 +44,9 @@ router.get(
   }
 );
 
-// Register Post
+//////////////////
+// (POST) Register
+//////////////////
 
 router.post("/register", async (req, res) => {
   try {
@@ -108,7 +114,9 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login Get
+//////////////////
+// (GET) Login
+//////////////////
 
 router.get("/login/:email/:password", async (req, res) => {
   const user = await User.findOne({ email: req.params["email"] });
@@ -126,7 +134,9 @@ router.get("/login/:email/:password", async (req, res) => {
   console.log(`${user.name}`.cyan + ` has logged in `.gray);
 });
 
-// Login Post
+//////////////////
+// (POST) Login
+//////////////////
 
 router.post("/login", async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
@@ -143,6 +153,9 @@ router.post("/login", async (req, res) => {
   console.log(`${user.name}`.cyan + ` has logged in `.gray);
 });
 
+//////////////////
+// (POST) Login License
+//////////////////
 
 router.post("/login-license", async (req, res) => {
   try {
@@ -176,6 +189,5 @@ router.post("/login-license", async (req, res) => {
   }
 });
 
-// Post Remove User
 
 module.exports = router;

@@ -1,3 +1,5 @@
+// Required Modules
+
 const router = require('express').Router();
 const User = require('../model/user');
 const verify = require('../util/verifyToken');
@@ -5,6 +7,7 @@ const file = require('../model/file');
 const UserLicense = require("../model/license");
 const fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
+
 // If no auth-token this won't work
 
 router.get('/', verify, (req, res) => {
@@ -12,6 +15,10 @@ router.get('/', verify, (req, res) => {
   res.send(req.user);
   //User.findbyOne({_id: req.user});
 });
+
+//////////////////
+// Generate a random token/license
+//////////////////
 
 router.post("/gen_token", verify, async (req, res) => {
   // If req has customer header and value allow the delete
@@ -45,6 +52,10 @@ router.post("/gen_token", verify, async (req, res) => {
   }
 })
 
+//////////////////
+// Remove User
+//////////////////
+
 router.post("/remove_user", verify, async (req, res) => {
   // If req has customer header and value allow the delete
   if (req.header(process.env.CUSTOM_HEADER) == process.env.CUSTOM_HEADER_VALUE) {
@@ -76,6 +87,10 @@ else {
   // Incorrect secret key, header
 }
 })
+
+//////////////////
+// Remove File
+//////////////////
 
 router.post("/remove_file", verify, async (req, res) => {
   if (req.header(process.env.CUSTOM_HEADER) == process.env.CUSTOM_HEADER_VALUE) {
@@ -109,6 +124,10 @@ router.post("/remove_file", verify, async (req, res) => {
     // Incorrect secret key, header
   }
 })
+
+//////////////////
+// Get User list
+//////////////////
 
 router.post("/get_users", verify, async (req, res) => {
   // If req has customer header and value allow the delete
