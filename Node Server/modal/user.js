@@ -1,20 +1,22 @@
 const mongoose = require("mongoose");
 
 const User = new mongoose.Schema({
-    // Nothing fancy here
+    // Name/Username
     name: {
         type: String,
         required: true,
     },
+    // Email (No Email Can Be The Same) 
     email: {
         type: String,
         required: true,
     },
-    // Hashed Password
+    // Password (Hashed Password)
     password: {
         type: String,
         required: true,
     },
+    // License (Tied To The User If Claimed)
     license: {
         type: String,
         required: false,
